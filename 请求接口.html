@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>接口数据请求</title>
+<style type="text/css">
+	.table{border:1px solid black;}
+	tr,td{border:1px solid black;}
+</style>
+<script type="text/javascript">
+	window.onload=function(){
+	var datanav=[{"id":1,"func_id":1000,"func_desc":"\u51cf\u538b\u754c\u9762"},{"id":2,"func_id":1001,"func_desc":"\u521b\u5efa\u51cf\u538b\u8ba1\u5212"},{"id":3,"func_id":1002,"func_desc":"\u80fd\u91cf\u6062\u590d"},{"id":4,"func_id":1003,"func_desc":"\u75b2\u52b3\u653e\u677e"},{"id":5,"func_id":1004,"func_desc":"\u6539\u5584\u7761\u7720"},{"id":6,"func_id":1005,"func_desc":"\u7cbe\u5fc3\u51a5\u60f3"},{"id":7,"func_id":1006,"func_desc":"\u4e34\u573a\u5feb\u901f\u51cf\u538b"},{"id":8,"func_id":1007,"func_desc":"\u8bfb\u5fc3"},{"id":9,"func_id":1008,"func_desc":"\u5fc3\u4e8b"},{"id":10,"func_id":1009,"func_desc":"\u6f6e\u547c\u5438"},{"id":11,"func_id":1010,"func_desc":"\u51cf\u538b\u767e\u79d1"},{"id":12,"func_id":2000,"func_desc":"\u53d1\u73b0\u754c\u9762"},{"id":13,"func_id":3000,"func_desc":"\u6211\u7684\u754c\u9762"},{"id":14,"func_id":3001,"func_desc":"\u5fc3\u4e8b\u5323\u5b50"},{"id":15,"func_id":3002,"func_desc":"\u51cf\u538b\u4e2d\u5fc3"},{"id":16,"func_id":3003,"func_desc":"\u6536\u85cf\u5361\u7247"},{"id":17,"func_id":3004,"func_desc":"\u4e00\u4efd\u95ee\u5377"},{"id":18,"func_id":3005,"func_desc":"\u6253\u5c0f\u62a5\u544a"},{"id":19,"func_id":3006,"func_desc":"\u5173\u4e8e\u5fc3\u6f6e"},{"id":20,"func_id":3007,"func_desc":"\u544a\u8bc9\u597d\u53cb"},{"id":21,"func_id":3008,"func_desc":"\u6d3b\u52a8\u4e2d\u5fc3"},{"id":22,"func_id":3009,"func_desc":"\u8bbe\u7f6e"},{"id":23,"func_id":3010,"func_desc":"\u4fee\u6539\u4e2a\u4eba\u8d44\u6599"},{"id":24,"func_id":1011,"func_desc":"\u8d2d\u4e70\u5fc3\u80ba\u68c0\u6d4bPro"},{"id":25,"func_id":1012,"func_desc":"\u5206\u4eab\u5fc3\u80ba\u68c0\u6d4bPro"},{"id":26,"func_id":1013,"func_desc":"\u6fc0\u6d3b\u5fc3\u80ba\u68c0\u6d4bPro"},{"id":27,"func_id":1014,"func_desc":"\u4e13\u6ce8"},{"id":28,"func_id":3011,"func_desc":"\u7cfb\u7edf\u901a\u77e5"},{"id":29,"func_id":1015,"func_desc":"\u7528\u6237\u5f39\u7a97\u767b\u9646"},{"id":30,"func_id":1016,"func_desc":"\u97f3\u9891Plus"},{"id":31,"func_id":1017,"func_desc":"\u5c0f\u7761\u7720APP\u793e\u533a\u9996\u9875"},{"id":32,"func_id":1018,"func_desc":"\u5c0f\u7761\u7720APP\u95f9\u949f\u9996\u9875"},{"id":33,"func_id":1019,"func_desc":"\u5c0f\u7761\u7720APP\u95f9\u949f\u5217\u8868"},{"id":34,"func_id":1020,"func_desc":"\u4e00\u952e\u5c0f\u7761\u77201"},{"id":35,"func_id":1021,"func_desc":"\u4e00\u952e\u5c0f\u7761\u77202"},{"id":36,"func_id":1022,"func_desc":"\u4e00\u952e\u5c0f\u7761\u77203"},{"id":37,"func_id":1023,"func_desc":"\u4e00\u952e\u5c0f\u7761\u77204"},{"id":38,"func_id":1024,"func_desc":"\u8d26\u53f7 - \u767b\u5f55"},{"id":39,"func_id":1025,"func_desc":"\u8d26\u53f7 - \u4e2a\u4eba\u4e3b\u9875"},{"id":40,"func_id":1026,"func_desc":"\u6c1b\u56f4 - \u4e3b\u9875"},{"id":41,"func_id":1027,"func_desc":"\u6c1b\u56f4 - \u4e2a\u4eba\u6536\u85cf"},{"id":42,"func_id":1028,"func_desc":"\u6c1b\u56f4 - \u4e2a\u4eba\u6536\u85cf - \u5217\u8868\u64ad\u653e"},{"id":43,"func_id":1029,"func_desc":"\u6c1b\u56f4 - \u5b98\u65b9\u63a8\u8350 - \u70ed\u95e8"},{"id":44,"func_id":1030,"func_desc":"\u6c1b\u56f4 - \u5b98\u65b9\u63a8\u8350 - \u6700\u65b0"},{"id":45,"func_id":1031,"func_desc":"\u6c1b\u56f4 - \u5b98\u65b9\u63a8\u8350 - \u7efc\u5408"},{"id":46,"func_id":1032,"func_desc":"\u6c1b\u56f4 - \u5b98\u65b9\u63a8\u8350 - \u5341\u4e8c\u661f\u5ea7"},{"id":47,"func_id":1033,"func_desc":"\u6c1b\u56f4 - 3D\u7acb\u4f53\u58f0"},{"id":48,"func_id":1034,"func_desc":"\u6c1b\u56f4 - \u58f0\u97f3\u5b9e\u9a8c\u5ba4"},{"id":49,"func_id":1035,"func_desc":"\u6c1b\u56f4 - \u6392\u884c\u699c"},{"id":50,"func_id":1036,"func_desc":"\u6c1b\u56f4 - \u5206\u7c7b"},{"id":51,"func_id":1037,"func_desc":"\u5f15\u5bfc\u8bed - \u4e3b\u9875"},{"id":52,"func_id":1038,"func_desc":"\u793e\u533a - \u4e3b\u9875"},{"id":53,"func_id":1039,"func_desc":"\u793e\u533a - \u4e2a\u4eba\u52a8\u6001"},{"id":54,"func_id":1040,"func_desc":"\u793e\u533a - \u4e2a\u4eba\u52a8\u6001 - \u6211\u7684\u5206\u4eab"},{"id":55,"func_id":1041,"func_desc":"\u793e\u533a - \u4e2a\u4eba\u52a8\u6001 - \u6211\u7684\u6536\u85cf"},{"id":56,"func_id":1042,"func_desc":"\u793e\u533a - \u5206\u4eab\u7ec4\u5408"},{"id":57,"func_id":1043,"func_desc":"Pro \u6c1b\u56f4 - \u667a\u80fd\u8bed\u97f3\u52a9\u624b pro\u4e13\u5c5e"},{"id":58,"func_id":1044,"func_desc":"\u8bbe\u7f6e"},{"id":60,"func_id":1045,"func_desc":"\u610f\u89c1\u53cd\u9988"}];
+	    var tb = document.getElementById("tb");
+	    for(var i=0;i < datanav.length;i++){
+	    	var row = tb.insertRow(tb.rows.length);
+	    	var c1 = row.insertCell(0);
+	    	c1.innerHTML = datanav[i].id;
+	    	var c2 = row.insertCell(1);
+	    	c2.innerHTML = datanav[i].func_id;
+	    	var c3 = row.insertCell(2);
+	    	c3.innerHTML = datanav[i].func_desc;
+	    }
+	}
+</script>
+</head>
+<body>
+  <table  id="tb" align="center" border="1" width="500px" cellspacing="0" cellpadding="5" rules="rows">
+  	<tr>
+  		<td>编号</td>
+  		<td>数值</td>
+  		<td>种类</td>
+  	</tr>
+  </table>
+</body>
+</html>
